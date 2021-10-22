@@ -19,7 +19,7 @@ echo 'initial users who logged in: '
 
 while IFS= read -r line; #prints temp1.txt which contains all user initially logged in
 do
-	echo "$line logged in to cse"
+	echo "$line logged in"
 done < temp1.txt
 
 cat temp1.txt > temp2.txt #copies data in temp1 to temp2
@@ -39,13 +39,13 @@ do
 
 	if [[ -s temp3.txt ]]
 	then #prints out new users
-        	echo -n " Logged out of cse"
+        	echo -n " Logged out"
 		cat temp3.txt  #prints temp1.txt which contains all user initially logged in
 		cat temp1.txt > temp2.txt
 
 	elif [[ -s temp4.txt ]] #prints out users that logged out
 	then
-		echo -n " Logged into cse"
+		echo -n " Logged in"
 		cat temp4.txt
 		cat temp1.txt > temp2.txt
 
